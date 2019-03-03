@@ -8,9 +8,15 @@
 </head>
 <body>
 <br>
+
+
 <div class="container">
 
     <?php
+
+    $soucetznamek = 0;
+    $pocetznamek = 0;
+
     $predmety = [
         'zeměpis' => 1,
         'dějepis' => 2,
@@ -27,14 +33,25 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>prvni sloupec</td>
-                <td>druhy sloupec</td>
-            </tr>
+        <tr>
+            <?php
+foreach ($predmety as $predmet => $znamka)
+            {
+            ?>
+            <th><?php echo $predmet ?></th>
+            <th><?php echo $znamka ?></th>
+        </tr>
+        <?php } ?>
+
         </tbody>
     </table>
 
-    Průměr:
+    <?php
+
+    $soucetznamek += $znamka;
+    $pocetznamek ++ ?>
+
+    Průměr: <?php $soucetznamek / $pocetznamek   ?>
 
 </div>
 </body>

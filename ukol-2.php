@@ -8,6 +8,11 @@
 </head>
 <body>
 <br>
+<?php
+        $radek = 1;
+        $pocetRadku = 5;
+?>
+
 <div class="container">
     <table class="table table-bordered">
         <thead>
@@ -17,12 +22,31 @@
             </tr>
         </thead>
         <tbody>
+        <tr>
+            <td><?php echo "$radek" ?></td>
+            <td><?php echo "$pocetRadku" ?></td>
+        </tr>
+        <?php
+
+        while ($radek < $pocetRadku){
+            $radek = $radek + 1;
+            ?>
             <tr>
-                <td>prvni sloupec</td>
-                <td>druhy sloupec</td>
+                <td><?php echo $radek; ?></td>
+                <td><?php echo $pocetRadku; ?></td>
             </tr>
+        <?php }; ?>
+
+        <?php
+        $dny =  ['pondělí', 'úterý', 'středa'];
+        foreach ($dny as $den) {
+        echo "$den, ";}
+        ?>
+
+
         </tbody>
     </table>
 </div>
 </body>
 </html>
+
